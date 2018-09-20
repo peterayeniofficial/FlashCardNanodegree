@@ -1,4 +1,5 @@
 import React from 'react'
+import { connect } from 'react-redux'
 import {
   Image,
   Platform,
@@ -7,24 +8,56 @@ import {
   Text,
   TouchableOpacity,
   View,
+  FlatList,
 } from 'react-native'
 import { WebBrowser } from 'expo'
+import { StyledOpenSansText } from '../components/StyledText'
+import { tintColor, lightPurp, purple, white } from '../constants/Colors'
 
-import { MonoText, StyledOpenSansText } from '../components/StyledText'
+import { handleInitDecks } from '../utils/helpers'
+import { SimpleLineIcon } from '../components/IconsGeneral'
 
-export default class HomeScreen extends React.Component {
+import Deck from '../components/Deck'
+
+class HomeScreen extends React.Component {
   static navigationOptions = {
     header: null,
   };
 
+  componentDidMount() {
+    const { dispatch } = this.props
+    dispatch(handleInitDecks()) // fetch datas
+  }
+
   render() {
+    const { decks } = this.props
+    // console.log(decks)
     return (
       <View style={styles.container}>
         <ScrollView contentContainerStyle={styles.contentContainer} style={styles.container}>
-
           <View style={styles.getStartedContainer}>
-            <Text style={styles.getStartedText}><StyledOpenSansText>Get started by opening</StyledOpenSansText></Text>
+            <Text style={styles.getStartedText}>
+              <StyledOpenSansText style={styles.title}>
+								CARD DECKS
+                <SimpleLineIcon
+                  name={
+										Platform.OS === 'ios'
+										? 'arrow-down-circle'
+										: 'md-information-circle'
+									}
+                />
+              </StyledOpenSansText>
+            </Text>
           </View>
+
+          <FlatList
+            data={decks}
+            keyExtractor={(item, i) => item.title}
+            renderItem={({ item }) => (
+              <Deck questions={item.questions} title={item.title} />
+          )}
+            style={styles.containerDecks}
+          />
         </ScrollView>
       </View>
     )
@@ -37,21 +70,31 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
   contentContainer: {
+    flex: 1,
     paddingTop: 30,
+    marginHorizontal: 0,
   },
   getStartedContainer: {
     alignItems: 'center',
-    marginHorizontal: 50,
+    justifyContent: 'center',
+    marginHorizontal: 0,
   },
-  // homeScreenFilename: {
-  // marginVertical: 7,
-  // },
+  title: {
+    flex: 1,
+    color: white,
+    fontSize: 20,
+    marginRight: 20,
+  },
   getStartedText: {
     fontSize: 17,
-    color: 'rgba(0,0,0,0.4)',
-    color: 'rgba(96,100,109, 1)',
-    lineHeight: 24,
+		 // lineHeight: 24,
     textAlign: 'center',
+    // marginVertical: 7,
+    backgroundColor: tintColor,
+    padding: 10,
+    marginTop: 0,
+    borderBottomLeftRadius: 10,
+    borderBottomRightRadius: 10,
   },
   // test: {// bottom in absolute with Platform select
   // position: 'absolute',
@@ -74,3 +117,9 @@ const styles = StyleSheet.create({
   // paddingVertical: 20,
   // },
 })
+function mapStateToProps(state, props) {
+  return {
+    decks: Object.values(state),
+  }
+}
+export default connect(mapStateToProps)(HomeScreen)

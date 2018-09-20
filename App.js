@@ -1,8 +1,14 @@
 import React from 'react'
 import { Platform, StatusBar, StyleSheet, View } from 'react-native'
+import { applyMiddleware, createStore } from 'redux'
+import { createLogger } from 'redux-logger'
+import { connect, Provider } from 'react-redux'
+import reducer from './reducers'
+import middlewares from './middleware'
 import { Constants, AppLoading, Asset, Font, Icon } from 'expo'
 import AppNavigator from './navigation/AppNavigator'
 import { purple, white } from './constants/Colors'
+
 
 function FlashCardStatusBar({ backgroundColor, ...props }) {
   return (
@@ -11,6 +17,9 @@ function FlashCardStatusBar({ backgroundColor, ...props }) {
     </View>
   )
 }
+// redux
+const store = createStore(reducer, middlewares)
+
 export default class App extends React.Component {
   state = {
     isLoadingComplete: false,
@@ -27,10 +36,12 @@ export default class App extends React.Component {
       )
     }
     return (
-      <View style={styles.container}>
-        {Platform.OS === 'ios' && <FlashCardStatusBar backgroundColor={purple} barStyle="light-content" />}
-        <AppNavigator /> {/* navigation  */}
-      </View>
+      <Provider store={store}>
+        <View style={styles.container}>
+          {Platform.OS === 'ios' && <FlashCardStatusBar backgroundColor={purple} barStyle="light-content" />}
+          <AppNavigator /> {/* navigation  */}
+        </View>
+      </Provider>
     )
   }
 
