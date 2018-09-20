@@ -1,15 +1,15 @@
-import React from 'react';
-import { Platform } from 'react-native';
-import { createStackNavigator, createBottomTabNavigator } from 'react-navigation';
+import React from 'react'
+import { Platform } from 'react-native'
+import { createStackNavigator, createBottomTabNavigator } from 'react-navigation'
 
-import TabBarIcon from '../components/TabBarIcon';
-import HomeScreen from '../screens/HomeScreen';
-import LinksScreen from '../screens/LinksScreen';
-import SettingsScreen from '../screens/SettingsScreen';
+import TabBarIcon from '../components/TabBarIcon'
+import HomeScreen from '../screens/HomeScreen'
+import LinksScreen from '../screens/LinksScreen'
+import SettingsScreen from '../screens/SettingsScreen'
 
 const HomeStack = createStackNavigator({
   Home: HomeScreen,
-});
+})
 
 HomeStack.navigationOptions = {
   tabBarLabel: 'Home',
@@ -18,16 +18,16 @@ HomeStack.navigationOptions = {
       focused={focused}
       name={
         Platform.OS === 'ios'
-          ? `ios-information-circle${focused ? '' : '-outline'}`
+          ? `ios-cube${focused ? '' : '-outline'}`
           : 'md-information-circle'
       }
     />
   ),
-};
+}
 
 const LinksStack = createStackNavigator({
   Links: LinksScreen,
-});
+})
 
 LinksStack.navigationOptions = {
   tabBarLabel: 'Links',
@@ -37,24 +37,24 @@ LinksStack.navigationOptions = {
       name={Platform.OS === 'ios' ? `ios-link${focused ? '' : '-outline'}` : 'md-link'}
     />
   ),
-};
+}
 
 const SettingsStack = createStackNavigator({
   Settings: SettingsScreen,
-});
+})
 
 SettingsStack.navigationOptions = {
   tabBarLabel: 'Settings',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
-      name={Platform.OS === 'ios' ? `ios-options${focused ? '' : '-outline'}` : 'md-options'}
+      name={Platform.OS === 'ios' ? `ios-play${focused ? '' : '-outline'}` : 'play-arrow'}
     />
   ),
-};
+}
 
 export default createBottomTabNavigator({
   HomeStack,
   LinksStack,
   SettingsStack,
-});
+})
