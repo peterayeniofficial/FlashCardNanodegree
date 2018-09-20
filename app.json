@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "flashcard",
-    "description": "A very interesting project.",
+    "description": "Flash Card is a good way too learn",
     "slug": "flashcard",
     "privacy": "public",
     "sdkVersion": "30.0.0",
@@ -10,7 +10,7 @@
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "splash": {
-      "image": "./assets/images/splash.png",
+      "image": "./assets/images/splash.jpg",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },

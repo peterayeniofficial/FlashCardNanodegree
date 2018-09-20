@@ -14,6 +14,7 @@ Container	screens/HomeScreen.js	/^  helpContainer: {$/;"	c
 Container	screens/HomeScreen.js	/^  welcomeContainer: {$/;"	c
 ContainerStyle	screens/HomeScreen.js	/^        <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>$/;"	c
 Error	App.js	/^          onError={this._handleLoadingError}$/;"	c
+Features	.eslintrc.js	/^    ecmaFeatures: {$/;"	c
 Filename	screens/HomeScreen.js	/^  navigationFilename: {$/;"	c
 Finish	App.js	/^          onFinish={this._handleFinishLoading}$/;"	c
 FinishLoading	App.js	/^  _handleFinishLoading = () => {$/;"	c
@@ -28,10 +29,12 @@ Link	screens/HomeScreen.js	/^  helpLink: {$/;"	c
 LinkText	screens/HomeScreen.js	/^  helpLinkText: {$/;"	c
 LinksScreen	screens/LinksScreen.js	/^export default class LinksScreen extends React.Component {$/;"	c
 LinksStack	navigation/MainTabNavigator.js	/^const LinksStack = createStackNavigator({$/;"	c
+LoadingError	App.js	/^  _handleLoadingError = (error) => {$/;"	c
 ModeText	screens/HomeScreen.js	/^  developmentModeText: {$/;"	c
 MonoText	components/StyledText.js	/^export class MonoText extends React.Component {$/;"	c
 MoreButton	screens/HomeScreen.js	/^      const learnMoreButton = ($/;"	c
 Offset	screens/HomeScreen.js	/^        shadowOffset: { height: -3 },$/;"	c
+Options	.eslintrc.js	/^  parserOptions: {$/;"	c
 Options	navigation/MainTabNavigator.js	/^HomeStack.navigationOptions = {$/;"	c
 Options	navigation/MainTabNavigator.js	/^LinksStack.navigationOptions = {$/;"	c
 Options	navigation/MainTabNavigator.js	/^SettingsStack.navigationOptions = {$/;"	c
@@ -40,7 +43,7 @@ Options	screens/LinksScreen.js	/^  static navigationOptions = {$/;"	c
 Options	screens/SettingsScreen.js	/^  static navigationOptions = {$/;"	c
 Press	screens/HomeScreen.js	/^            <TouchableOpacity onPress={this._handleHelpPress} style={styles.helpLink}>$/;"	c
 Press	screens/HomeScreen.js	/^        <Text onPress={this._handleLearnMorePress} style={styles.helpLinkText}>$/;"	c
-ResourcesAsync	App.js	/^  _loadResourcesAsync = async () => {$/;"	c
+ResourcesAsync	App.js	/^  _loadResourcesAsync = async () => Promise.all([$/;"	c
 ScreenFilename	screens/HomeScreen.js	/^  homeScreenFilename: {$/;"	c
 SettingsScreen	screens/SettingsScreen.js	/^export default class SettingsScreen extends React.Component {$/;"	c
 SettingsStack	navigation/MainTabNavigator.js	/^const SettingsStack = createStackNavigator({$/;"	c
@@ -56,6 +59,8 @@ container	screens/HomeScreen.js	/^  container: {$/;"	o
 container	screens/LinksScreen.js	/^  container: {$/;"	o
 contentContainer	screens/HomeScreen.js	/^  contentContainer: {$/;"	o
 developmentModeText	screens/HomeScreen.js	/^  developmentModeText: {$/;"	o
+ecmaFeatures	.eslintrc.js	/^    ecmaFeatures: {$/;"	o
+exports	.eslintrc.js	/^module.exports = {$/;"	o
 getStartedContainer	screens/HomeScreen.js	/^  getStartedContainer: {$/;"	o
 getStartedText	screens/HomeScreen.js	/^  getStartedText: {$/;"	o
 helpContainer	screens/HomeScreen.js	/^  helpContainer: {$/;"	o
@@ -69,12 +74,14 @@ navigationFilename	screens/HomeScreen.js	/^  navigationFilename: {$/;"	o
 navigationOptions	navigation/MainTabNavigator.js	/^HomeStack.navigationOptions = {$/;"	o
 navigationOptions	navigation/MainTabNavigator.js	/^LinksStack.navigationOptions = {$/;"	o
 navigationOptions	navigation/MainTabNavigator.js	/^SettingsStack.navigationOptions = {$/;"	o
+parserOptions	.eslintrc.js	/^  parserOptions: {$/;"	o
 render	App.js	/^  render() {$/;"	f
 render	components/StyledText.js	/^  render() {$/;"	f
 render	components/TabBarIcon.js	/^  render() {$/;"	f
 render	screens/HomeScreen.js	/^  render() {$/;"	f
 render	screens/LinksScreen.js	/^  render() {$/;"	f
 render	screens/SettingsScreen.js	/^  render() {$/;"	f
+rules	.eslintrc.js	/^  rules: {$/;"	o
 shadowOffset	screens/HomeScreen.js	/^        shadowOffset: { height: -3 },$/;"	o
 tabBarInfoContainer	screens/HomeScreen.js	/^  tabBarInfoContainer: {$/;"	o
 tabBarInfoText	screens/HomeScreen.js	/^  tabBarInfoText: {$/;"	o
