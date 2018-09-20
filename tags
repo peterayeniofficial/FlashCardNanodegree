@@ -1,0 +1,83 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+App	App.js	/^export default class App extends React.Component {$/;"	c
+Async	App.js	/^          startAsync={this._loadResourcesAsync}$/;"	c
+BarIcon	navigation/MainTabNavigator.js	/^  tabBarIcon: ({ focused }) => ($/;"	c
+BarInfoContainer	screens/HomeScreen.js	/^  tabBarInfoContainer: {$/;"	c
+BarInfoText	screens/HomeScreen.js	/^  tabBarInfoText: {$/;"	c
+Container	screens/HomeScreen.js	/^  contentContainer: {$/;"	c
+Container	screens/HomeScreen.js	/^  helpContainer: {$/;"	c
+Container	screens/HomeScreen.js	/^  welcomeContainer: {$/;"	c
+ContainerStyle	screens/HomeScreen.js	/^        <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>$/;"	c
+Error	App.js	/^          onError={this._handleLoadingError}$/;"	c
+Filename	screens/HomeScreen.js	/^  navigationFilename: {$/;"	c
+Finish	App.js	/^          onFinish={this._handleFinishLoading}$/;"	c
+FinishLoading	App.js	/^  _handleFinishLoading = () => {$/;"	c
+HelpPress	screens/HomeScreen.js	/^  _handleHelpPress = () => {$/;"	c
+HighlightContainer	screens/HomeScreen.js	/^  codeHighlightContainer: {$/;"	c
+HighlightText	screens/HomeScreen.js	/^  codeHighlightText: {$/;"	c
+HomeScreen	screens/HomeScreen.js	/^export default class HomeScreen extends React.Component {$/;"	c
+HomeStack	navigation/MainTabNavigator.js	/^const HomeStack = createStackNavigator({$/;"	c
+Image	screens/HomeScreen.js	/^  welcomeImage: {$/;"	c
+LearnMorePress	screens/HomeScreen.js	/^  _handleLearnMorePress = () => {$/;"	c
+Link	screens/HomeScreen.js	/^  helpLink: {$/;"	c
+LinkText	screens/HomeScreen.js	/^  helpLinkText: {$/;"	c
+LinksScreen	screens/LinksScreen.js	/^export default class LinksScreen extends React.Component {$/;"	c
+LinksStack	navigation/MainTabNavigator.js	/^const LinksStack = createStackNavigator({$/;"	c
+ModeText	screens/HomeScreen.js	/^  developmentModeText: {$/;"	c
+MonoText	components/StyledText.js	/^export class MonoText extends React.Component {$/;"	c
+MoreButton	screens/HomeScreen.js	/^      const learnMoreButton = ($/;"	c
+Offset	screens/HomeScreen.js	/^        shadowOffset: { height: -3 },$/;"	c
+Options	navigation/MainTabNavigator.js	/^HomeStack.navigationOptions = {$/;"	c
+Options	navigation/MainTabNavigator.js	/^LinksStack.navigationOptions = {$/;"	c
+Options	navigation/MainTabNavigator.js	/^SettingsStack.navigationOptions = {$/;"	c
+Options	screens/HomeScreen.js	/^  static navigationOptions = {$/;"	c
+Options	screens/LinksScreen.js	/^  static navigationOptions = {$/;"	c
+Options	screens/SettingsScreen.js	/^  static navigationOptions = {$/;"	c
+Press	screens/HomeScreen.js	/^            <TouchableOpacity onPress={this._handleHelpPress} style={styles.helpLink}>$/;"	c
+Press	screens/HomeScreen.js	/^        <Text onPress={this._handleLearnMorePress} style={styles.helpLinkText}>$/;"	c
+ResourcesAsync	App.js	/^  _loadResourcesAsync = async () => {$/;"	c
+ScreenFilename	screens/HomeScreen.js	/^  homeScreenFilename: {$/;"	c
+SettingsScreen	screens/SettingsScreen.js	/^export default class SettingsScreen extends React.Component {$/;"	c
+SettingsStack	navigation/MainTabNavigator.js	/^const SettingsStack = createStackNavigator({$/;"	c
+StartedContainer	screens/HomeScreen.js	/^  getStartedContainer: {$/;"	c
+StartedText	screens/HomeScreen.js	/^  getStartedText: {$/;"	c
+TabBarIcon	components/TabBarIcon.js	/^export default class TabBarIcon extends React.Component {$/;"	c
+_maybeRenderDevelopmentModeWarning	screens/HomeScreen.js	/^  _maybeRenderDevelopmentModeWarning() {$/;"	f
+android	screens/HomeScreen.js	/^      android: {$/;"	o
+codeHighlightContainer	screens/HomeScreen.js	/^  codeHighlightContainer: {$/;"	o
+codeHighlightText	screens/HomeScreen.js	/^  codeHighlightText: {$/;"	o
+container	App.js	/^  container: {$/;"	o
+container	screens/HomeScreen.js	/^  container: {$/;"	o
+container	screens/LinksScreen.js	/^  container: {$/;"	o
+contentContainer	screens/HomeScreen.js	/^  contentContainer: {$/;"	o
+developmentModeText	screens/HomeScreen.js	/^  developmentModeText: {$/;"	o
+getStartedContainer	screens/HomeScreen.js	/^  getStartedContainer: {$/;"	o
+getStartedText	screens/HomeScreen.js	/^  getStartedText: {$/;"	o
+helpContainer	screens/HomeScreen.js	/^  helpContainer: {$/;"	o
+helpLink	screens/HomeScreen.js	/^  helpLink: {$/;"	o
+helpLinkText	screens/HomeScreen.js	/^  helpLinkText: {$/;"	o
+homeScreenFilename	screens/HomeScreen.js	/^  homeScreenFilename: {$/;"	o
+if	App.js	/^    if (!this.state.isLoadingComplete && !this.props.skipLoadingScreen) {$/;"	f
+if	screens/HomeScreen.js	/^    if (__DEV__) {$/;"	f
+ios	screens/HomeScreen.js	/^      ios: {$/;"	o
+navigationFilename	screens/HomeScreen.js	/^  navigationFilename: {$/;"	o
+navigationOptions	navigation/MainTabNavigator.js	/^HomeStack.navigationOptions = {$/;"	o
+navigationOptions	navigation/MainTabNavigator.js	/^LinksStack.navigationOptions = {$/;"	o
+navigationOptions	navigation/MainTabNavigator.js	/^SettingsStack.navigationOptions = {$/;"	o
+render	App.js	/^  render() {$/;"	f
+render	components/StyledText.js	/^  render() {$/;"	f
+render	components/TabBarIcon.js	/^  render() {$/;"	f
+render	screens/HomeScreen.js	/^  render() {$/;"	f
+render	screens/LinksScreen.js	/^  render() {$/;"	f
+render	screens/SettingsScreen.js	/^  render() {$/;"	f
+shadowOffset	screens/HomeScreen.js	/^        shadowOffset: { height: -3 },$/;"	o
+tabBarInfoContainer	screens/HomeScreen.js	/^  tabBarInfoContainer: {$/;"	o
+tabBarInfoText	screens/HomeScreen.js	/^  tabBarInfoText: {$/;"	o
+welcomeContainer	screens/HomeScreen.js	/^  welcomeContainer: {$/;"	o
+welcomeImage	screens/HomeScreen.js	/^  welcomeImage: {$/;"	o
+window	constants/Layout.js	/^  window: {$/;"	o
