@@ -1,9 +1,16 @@
 import React from 'react'
 import { Platform, StatusBar, StyleSheet, View } from 'react-native'
-import { AppLoading, Asset, Font, Icon } from 'expo'
+import { Constants, AppLoading, Asset, Font, Icon } from 'expo'
 import AppNavigator from './navigation/AppNavigator'
 import { purple, white } from './constants/Colors'
 
+function FlashCardStatusBar({ backgroundColor, ...props }) {
+  return (
+    <View style={{ backgroundColor, height: Constants.statusBarHeight }}>
+      <StatusBar backgroundColor={backgroundColor} translucent {...props} />
+    </View>
+  )
+}
 export default class App extends React.Component {
   state = {
     isLoadingComplete: false,
@@ -14,14 +21,14 @@ export default class App extends React.Component {
       return (
         <AppLoading
           onError={this._handleLoadingError}
-          onFinish={this._handleFinishLoading}
+          onFinish={this._handleFinishLoading} // the loading is complete
           startAsync={this._loadResourcesAsync}
         />
       )
     }
     return (
       <View style={styles.container}>
-        {Platform.OS === 'ios' && <StatusBar barStyle="default" />}
+        {Platform.OS === 'ios' && <FlashCardStatusBar backgroundColor={purple} barStyle="light-content" />}
         <AppNavigator /> {/* navigation  */}
       </View>
     )
