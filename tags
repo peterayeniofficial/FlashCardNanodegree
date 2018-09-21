@@ -4,87 +4,164 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
+ADD_DECK	actions/index.js	/^export const ADD_DECK = 'ADD_DECK'$/;"	n
+Active	screens/DeckDetails.js	/^  btnActive: {$/;"	c
+Answer	screens/HomeScreen.js	/^  childAnswer: {$/;"	c
+Answer	screens/Quiz.js	/^  childAnswer: {$/;"	c
 App	App.js	/^export default class App extends React.Component {$/;"	c
 Async	App.js	/^          startAsync={this._loadResourcesAsync}$/;"	c
 BarIcon	navigation/MainTabNavigator.js	/^  tabBarIcon: ({ focused }) => ($/;"	c
-BarInfoContainer	screens/HomeScreen.js	/^  tabBarInfoContainer: {$/;"	c
-BarInfoText	screens/HomeScreen.js	/^  tabBarInfoText: {$/;"	c
+CSS	utils/helpers.js	/^    CSS: {$/;"	c
+CSS	utils/helpers.js	/^    CSS: {$/;"	n
+CSS	utils/helpers.js	/^    CSS: {$/;"	o
+Color	App.js	/^          {Platform.OS === 'ios' && <FlashCardStatusBar backgroundColor={purple} barStyle="light-content" \/>}$/;"	c
+Color	App.js	/^      <StatusBar backgroundColor={backgroundColor} translucent {...props} \/>$/;"	c
+Color	components/Deck.js	/^    const randColor = getRandomColor()$/;"	c
+Color	utils/colors.js	/^  const randColor = getRandomColor()$/;"	c
+Color	utils/colors.js	/^export const randomColor = (color = 'green') => {$/;"	c
 Container	screens/HomeScreen.js	/^  contentContainer: {$/;"	c
-Container	screens/HomeScreen.js	/^  helpContainer: {$/;"	c
-Container	screens/HomeScreen.js	/^  welcomeContainer: {$/;"	c
-ContainerStyle	screens/HomeScreen.js	/^        <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>$/;"	c
+Container	screens/HomeScreen.js	/^  testContainer: {$/;"	c
+Container	screens/Quiz.js	/^  testContainer: {$/;"	c
+ContainerStyle	screens/DeckDetails.js	/^             disabledContainerStyle={{ backgroundColor: randColor }}$/;"	c
+ContainerStyle	screens/HomeScreen.js	/^        <ScrollView contentContainerStyle={styles.contentContainer} style={styles.container}>$/;"	c
+Deck	components/Deck.js	/^class Deck extends Component {$/;"	c
+Deck	screens/Quiz.js	/^     title: `Deck: ${navigation.state.params.title}`,$/;"	c
+DeckDetails	navigation/MainTabNavigator.js	/^  DeckDetails: {$/;"	c
+DeckDetails	navigation/MainTabNavigator.js	/^  DeckDetails: {$/;"	o
+DeckDetails	screens/DeckDetails.js	/^class DeckDetails extends Component {$/;"	c
+Decks	navigation/MainTabNavigator.js	/^  Decks: {$/;"	c
+Decks	navigation/MainTabNavigator.js	/^  Decks: {$/;"	o
+Disabled	screens/DeckDetails.js	/^             styleDisabled={{ color: 'white' }}$/;"	c
 Error	App.js	/^          onError={this._handleLoadingError}$/;"	c
+Extractor	screens/HomeScreen.js	/^            keyExtractor={(item, i) => item.title}$/;"	c
+Face	components/Deck.js	/^  textFace: {$/;"	c
+FaceLabel	components/Deck.js	/^  textFaceLabel: {$/;"	c
 Features	.eslintrc.js	/^    ecmaFeatures: {$/;"	c
-Filename	screens/HomeScreen.js	/^  navigationFilename: {$/;"	c
-Finish	App.js	/^          onFinish={this._handleFinishLoading}$/;"	c
+Finish	App.js	/^          onFinish={this._handleFinishLoading} \/\/ the loading is complete$/;"	c
 FinishLoading	App.js	/^  _handleFinishLoading = () => {$/;"	c
-HelpPress	screens/HomeScreen.js	/^  _handleHelpPress = () => {$/;"	c
-HighlightContainer	screens/HomeScreen.js	/^  codeHighlightContainer: {$/;"	c
-HighlightText	screens/HomeScreen.js	/^  codeHighlightText: {$/;"	c
-HomeScreen	screens/HomeScreen.js	/^export default class HomeScreen extends React.Component {$/;"	c
+Firebase	utils/helpers.js	/^    Firebase: {$/;"	c
+Firebase	utils/helpers.js	/^    Firebase: {$/;"	o
+FlashCardStatusBar	App.js	/^function FlashCardStatusBar({ backgroundColor, ...props }) {$/;"	f
+HTML	utils/helpers.js	/^    HTML: {$/;"	c
+HTML	utils/helpers.js	/^    HTML: {$/;"	n
+HTML	utils/helpers.js	/^    HTML: {$/;"	o
+HomeScreen	screens/HomeScreen.js	/^class HomeScreen extends React.Component {$/;"	c
 HomeStack	navigation/MainTabNavigator.js	/^const HomeStack = createStackNavigator({$/;"	c
-Image	screens/HomeScreen.js	/^  welcomeImage: {$/;"	c
-LearnMorePress	screens/HomeScreen.js	/^  _handleLearnMorePress = () => {$/;"	c
-Link	screens/HomeScreen.js	/^  helpLink: {$/;"	c
-LinkText	screens/HomeScreen.js	/^  helpLinkText: {$/;"	c
+Item	screens/HomeScreen.js	/^            renderItem={({ item }) => ($/;"	c
+JSON	utils/helpers.js	/^    JSON: {$/;"	c
+JSON	utils/helpers.js	/^    JSON: {$/;"	n
+JSON	utils/helpers.js	/^    JSON: {$/;"	o
+JavaScript	utils/helpers.js	/^    JavaScript: {$/;"	c
+JavaScript	utils/helpers.js	/^    JavaScript: {$/;"	o
+LOAD_DATAS	utils/helpers.js	/^export const LOAD_DATAS = 'Decks'$/;"	n
 LinksScreen	screens/LinksScreen.js	/^export default class LinksScreen extends React.Component {$/;"	c
 LinksStack	navigation/MainTabNavigator.js	/^const LinksStack = createStackNavigator({$/;"	c
 LoadingError	App.js	/^  _handleLoadingError = (error) => {$/;"	c
-ModeText	screens/HomeScreen.js	/^  developmentModeText: {$/;"	c
 MonoText	components/StyledText.js	/^export class MonoText extends React.Component {$/;"	c
-MoreButton	screens/HomeScreen.js	/^      const learnMoreButton = ($/;"	c
-Offset	screens/HomeScreen.js	/^        shadowOffset: { height: -3 },$/;"	c
+Native	utils/helpers.js	/^    reactNative: {$/;"	c
+Offset	components/Deck.js	/^    shadowOffset: {$/;"	c
+Offset	screens/HomeScreen.js	/^  \/\/ shadowOffset: { height: -3 },$/;"	c
 Options	.eslintrc.js	/^  parserOptions: {$/;"	c
+Options	navigation/MainTabNavigator.js	/^    navigationOptions: ({ navigation }) => ({$/;"	c
+Options	navigation/MainTabNavigator.js	/^    navigationOptions: {$/;"	c
 Options	navigation/MainTabNavigator.js	/^HomeStack.navigationOptions = {$/;"	c
 Options	navigation/MainTabNavigator.js	/^LinksStack.navigationOptions = {$/;"	c
 Options	navigation/MainTabNavigator.js	/^SettingsStack.navigationOptions = {$/;"	c
+Options	screens/DeckDetails.js	/^   static navigationOptions = ({ navigation }) => ({$/;"	c
 Options	screens/HomeScreen.js	/^  static navigationOptions = {$/;"	c
 Options	screens/LinksScreen.js	/^  static navigationOptions = {$/;"	c
+Options	screens/Quiz.js	/^   static navigationOptions = ({ navigation }) => ({$/;"	c
 Options	screens/SettingsScreen.js	/^  static navigationOptions = {$/;"	c
-Press	screens/HomeScreen.js	/^            <TouchableOpacity onPress={this._handleHelpPress} style={styles.helpLink}>$/;"	c
-Press	screens/HomeScreen.js	/^        <Text onPress={this._handleLearnMorePress} style={styles.helpLinkText}>$/;"	c
+Press	components/Deck.js	/^          onPress={() => this.props.navigation.dispatch(navigateAction)}$/;"	c
+Press	screens/DeckDetails.js	/^             onPress={() => navigation.navigate($/;"	c
+Press	screens/DeckDetails.js	/^             onPress={() => this.handleAddCard()}$/;"	c
+Question	screens/HomeScreen.js	/^  childQuestion: {$/;"	c
+Question	screens/Quiz.js	/^  childQuestion: {$/;"	c
+Quiz	navigation/MainTabNavigator.js	/^  Quiz: {$/;"	c
+Quiz	navigation/MainTabNavigator.js	/^  Quiz: {$/;"	o
+Quiz	screens/Quiz.js	/^class Quiz extends Component {$/;"	c
+RECEIVE_DECKS	actions/index.js	/^export const RECEIVE_DECKS = 'RECEIVE_DECKS'$/;"	n
+RandomColor	utils/colors.js	/^export const getRandomColor = () => {$/;"	c
+React	utils/helpers.js	/^    React: {$/;"	c
+React	utils/helpers.js	/^    React: {$/;"	o
 ResourcesAsync	App.js	/^  _loadResourcesAsync = async () => Promise.all([$/;"	c
-ScreenFilename	screens/HomeScreen.js	/^  homeScreenFilename: {$/;"	c
 SettingsScreen	screens/SettingsScreen.js	/^export default class SettingsScreen extends React.Component {$/;"	c
 SettingsStack	navigation/MainTabNavigator.js	/^const SettingsStack = createStackNavigator({$/;"	c
+SimpleLineIcon	components/IconsGeneral.js	/^export class SimpleLineIcon extends React.Component {$/;"	c
 StartedContainer	screens/HomeScreen.js	/^  getStartedContainer: {$/;"	c
 StartedText	screens/HomeScreen.js	/^  getStartedText: {$/;"	c
+Style	navigation/MainTabNavigator.js	/^      headerStyle: {$/;"	c
+Style	screens/DeckDetails.js	/^             containerStyle={{$/;"	c
+StyledOpenSansText	components/StyledOpenSansText.js	/^export class StyledOpenSansText extends React.Component {$/;"	c
+StyledOpenSansText	components/StyledText.js	/^export class StyledOpenSansText extends React.Component {$/;"	c
 TabBarIcon	components/TabBarIcon.js	/^export default class TabBarIcon extends React.Component {$/;"	c
-_maybeRenderDevelopmentModeWarning	screens/HomeScreen.js	/^  _maybeRenderDevelopmentModeWarning() {$/;"	f
-android	screens/HomeScreen.js	/^      android: {$/;"	o
-codeHighlightContainer	screens/HomeScreen.js	/^  codeHighlightContainer: {$/;"	o
-codeHighlightText	screens/HomeScreen.js	/^  codeHighlightText: {$/;"	o
+Tabs	navigation/MainTabNavigator.js	/^const Tabs = createBottomTabNavigator({$/;"	c
+Title	screens/DeckDetails.js	/^  subTitle: {$/;"	c
+TitleStyle	navigation/MainTabNavigator.js	/^      headerTitleStyle: {$/;"	c
+Vim	utils/helpers.js	/^    Vim: {$/;"	c
+Vim	utils/helpers.js	/^    Vim: {$/;"	o
+addDeck	actions/index.js	/^export function addDeck(deck) {$/;"	f
+android	screens/HomeScreen.js	/^  \/\/ android: {$/;"	o
+answer	screens/Quiz.js	/^  answer: {$/;"	o
+btn	screens/DeckDetails.js	/^  btn: {$/;"	o
+btnActive	screens/DeckDetails.js	/^  btnActive: {$/;"	o
+card	components/Deck.js	/^  card: {$/;"	o
+card	screens/Quiz.js	/^  card: {$/;"	o
+center	components/Deck.js	/^  center: {$/;"	o
+childAnswer	screens/HomeScreen.js	/^  childAnswer: {$/;"	o
+childAnswer	screens/Quiz.js	/^  childAnswer: {$/;"	o
+childQuestion	screens/HomeScreen.js	/^  childQuestion: {$/;"	o
+childQuestion	screens/Quiz.js	/^  childQuestion: {$/;"	o
+componentDidMount	screens/HomeScreen.js	/^  componentDidMount() {$/;"	f
 container	App.js	/^  container: {$/;"	o
+container	screens/DeckDetails.js	/^  container: {$/;"	o
 container	screens/HomeScreen.js	/^  container: {$/;"	o
 container	screens/LinksScreen.js	/^  container: {$/;"	o
 contentContainer	screens/HomeScreen.js	/^  contentContainer: {$/;"	o
-developmentModeText	screens/HomeScreen.js	/^  developmentModeText: {$/;"	o
+decks	reducers/index.js	/^function decks(state = {}, action) {$/;"	f
 ecmaFeatures	.eslintrc.js	/^    ecmaFeatures: {$/;"	o
 exports	.eslintrc.js	/^module.exports = {$/;"	o
 getStartedContainer	screens/HomeScreen.js	/^  getStartedContainer: {$/;"	o
 getStartedText	screens/HomeScreen.js	/^  getStartedText: {$/;"	o
-helpContainer	screens/HomeScreen.js	/^  helpContainer: {$/;"	o
-helpLink	screens/HomeScreen.js	/^  helpLink: {$/;"	o
-helpLinkText	screens/HomeScreen.js	/^  helpLinkText: {$/;"	o
-homeScreenFilename	screens/HomeScreen.js	/^  homeScreenFilename: {$/;"	o
+handleInitDecks	utils/helpers.js	/^export function handleInitDecks() {$/;"	f
+headerStyle	navigation/MainTabNavigator.js	/^      headerStyle: {$/;"	o
+headerTitleStyle	navigation/MainTabNavigator.js	/^      headerTitleStyle: {$/;"	o
 if	App.js	/^    if (!this.state.isLoadingComplete && !this.props.skipLoadingScreen) {$/;"	f
-if	screens/HomeScreen.js	/^    if (__DEV__) {$/;"	f
-ios	screens/HomeScreen.js	/^      ios: {$/;"	o
-navigationFilename	screens/HomeScreen.js	/^  navigationFilename: {$/;"	o
+if	utils/colors.js	/^  if (randColor === color) {$/;"	f
+ios	screens/HomeScreen.js	/^  \/\/ ios: {$/;"	o
+level	middleware/index.js	/^  level: {$/;"	o
+loadDatas	utils/helpers.js	/^export function loadDatas() {$/;"	f
+mapStateToProps	screens/HomeScreen.js	/^function mapStateToProps(state, props) {$/;"	f
+navigationOptions	navigation/MainTabNavigator.js	/^    navigationOptions: {$/;"	o
 navigationOptions	navigation/MainTabNavigator.js	/^HomeStack.navigationOptions = {$/;"	o
 navigationOptions	navigation/MainTabNavigator.js	/^LinksStack.navigationOptions = {$/;"	o
 navigationOptions	navigation/MainTabNavigator.js	/^SettingsStack.navigationOptions = {$/;"	o
+params	components/Deck.js	/^      params: {$/;"	o
 parserOptions	.eslintrc.js	/^  parserOptions: {$/;"	o
+question	screens/Quiz.js	/^  question: {$/;"	o
+reactNative	utils/helpers.js	/^    reactNative: {$/;"	o
+receiveDecks	actions/index.js	/^export function receiveDecks(decks) {$/;"	f
 render	App.js	/^  render() {$/;"	f
+render	components/Deck.js	/^  render() {$/;"	f
+render	components/IconsGeneral.js	/^  render() {$/;"	f
+render	components/StyledOpenSansText.js	/^  render() {$/;"	f
 render	components/StyledText.js	/^  render() {$/;"	f
 render	components/TabBarIcon.js	/^  render() {$/;"	f
+render	screens/DeckDetails.js	/^   render() {$/;"	f
 render	screens/HomeScreen.js	/^  render() {$/;"	f
 render	screens/LinksScreen.js	/^  render() {$/;"	f
+render	screens/Quiz.js	/^  render() {$/;"	f
 render	screens/SettingsScreen.js	/^  render() {$/;"	f
 rules	.eslintrc.js	/^  rules: {$/;"	o
-shadowOffset	screens/HomeScreen.js	/^        shadowOffset: { height: -3 },$/;"	o
-tabBarInfoContainer	screens/HomeScreen.js	/^  tabBarInfoContainer: {$/;"	o
-tabBarInfoText	screens/HomeScreen.js	/^  tabBarInfoText: {$/;"	o
-welcomeContainer	screens/HomeScreen.js	/^  welcomeContainer: {$/;"	o
-welcomeImage	screens/HomeScreen.js	/^  welcomeImage: {$/;"	o
+shadowOffset	components/Deck.js	/^    shadowOffset: {$/;"	o
+shadowOffset	screens/HomeScreen.js	/^  \/\/ shadowOffset: { height: -3 },$/;"	o
+subTitle	screens/DeckDetails.js	/^  subTitle: {$/;"	o
+switch	reducers/index.js	/^  switch (action.type) {$/;"	f
+test	screens/HomeScreen.js	/^  \/\/ test: {\/\/ bottom in absolute with Platform select$/;"	o
+testContainer	screens/HomeScreen.js	/^  testContainer: {$/;"	o
+testContainer	screens/Quiz.js	/^  testContainer: {$/;"	o
+textFace	components/Deck.js	/^  textFace: {$/;"	o
+textFaceLabel	components/Deck.js	/^  textFaceLabel: {$/;"	o
+title	screens/DeckDetails.js	/^  title: {$/;"	o
+title	screens/HomeScreen.js	/^  title: {$/;"	o
 window	constants/Layout.js	/^  window: {$/;"	o

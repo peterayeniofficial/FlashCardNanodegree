@@ -29,8 +29,8 @@ export default class App extends React.Component {
     if (!this.state.isLoadingComplete && !this.props.skipLoadingScreen) {
       return (
         <AppLoading
-          onError={this._handleLoadingError}
-          onFinish={this._handleFinishLoading} // the loading is complete
+          onError={this.handleLoadingError}
+          onFinish={this.handleFinishLoading} // the loading is complete
           startAsync={this._loadResourcesAsync}
         />
       )
@@ -60,13 +60,13 @@ export default class App extends React.Component {
     }),
   ]);
 
-  _handleLoadingError = (error) => {
+  handleLoadingError = (error) => {
     // In this case, you might want to report the error to your error
     // reporting service, for example Sentry
     console.warn(error)
   };
 
-  _handleFinishLoading = () => {
+  handleFinishLoading = () => {
     this.setState({ isLoadingComplete: true })
   };
 }
