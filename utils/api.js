@@ -95,7 +95,7 @@ const allDecks = {
   },
 }
 
-export function initData() {
+export function initialData() {
   AsyncStorage.setItem(DECKS_KEY, JSON.stringify(allDecks))
   return allDecks
 }
@@ -105,8 +105,3 @@ export function fetchDecks() {
       ? initialData()
       : JSON.parse(results)))
 }
-
-// export function initialData() {
-// AsyncStorage.setItem(DECKS_KEY, JSON.stringify(_allDecks))
-// return allDecks
-// }

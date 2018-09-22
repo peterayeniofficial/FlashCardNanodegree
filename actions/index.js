@@ -8,9 +8,14 @@ export function receiveDecks(decks) {
   }
 }
 
-export function addDeck(deck) {
+export function addDeck({ name }) {
   return {
     type: ADD_DECK,
-    deck,
+    name,
   }
 }
+
+export const addCard = parameters => ({
+  type: ADD_CARD,
+  parameters,
+})

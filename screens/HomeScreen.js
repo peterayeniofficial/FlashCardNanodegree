@@ -15,6 +15,7 @@ import { StyledOpenSansText } from '../components/StyledText'
 import { tintColor, lightPurp, purple, white } from '../constants/Colors'
 
 import { fetchDecks } from '../utils/api'
+import { receiveDecks } from '../actions'
 import { SimpleLineIcon } from '../components/IconsGeneral'
 
 import Deck from '../components/Deck'
@@ -28,12 +29,12 @@ class HomeScreen extends React.Component {
     const { dispatch } = this.props
     // dispatch(handleInitDecks()) // fetch datas
 	  fetchDecks()
-	    .then(decks => dispatch(getDecks(decks)))
-	    .then(() => this.setLoading(false))
-	    .catch(() => this.setLoading(false))
+	    .then(decks => dispatch(receiveDecks(decks)))
+    console.log('dddddddddddddd')
   }
   render() {
     const { decks } = this.props
+    console.log(decks)
     return (
       <View style={styles.container}>
         <View style={styles.getStartedContainer}>
@@ -54,6 +55,13 @@ class HomeScreen extends React.Component {
         />
       </View>
     )
+  }
+}
+
+function mapStateToProps(decks, props) {
+  console.log(Object.values(decks))
+  return {
+    decks: Object.values(decks),
   }
 }
 
@@ -94,9 +102,4 @@ const styles = StyleSheet.create({
     borderBottomRightRadius: 10,
   },
 })
-function mapStateToProps(decks, props) {
-  return {
-    decks: Object.values(decks),
-  }
-}
 export default connect(mapStateToProps)(HomeScreen)
