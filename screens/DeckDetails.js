@@ -10,7 +10,7 @@ import Quiz from './Quiz'
 class DeckDetails extends Component {
   // header navigation
    static navigationOptions = ({ navigation }) => ({
-     title: navigation.state.params.title,
+     title: `Deck: ${navigation.state.params.title}`,
    });
    render() {
      console.log(this.props)
@@ -21,44 +21,58 @@ class DeckDetails extends Component {
 
      console.log(questions, title, numberCard, randColor)
      return (
-       <View>
-         <Text style={styles.title}>
-           {title }
-         </Text>
-         <Text style={styles.subTitle}>
-           {numberCard }
-         </Text>
-         <View style={{ marginTop: 10 }}>
+       <View style={styles.container}>
+         <View style={[styles.borderBox, {
+           // borderColor: randColor, borderWidth: 1
+           }]}
+         >
+           <Text style={[styles.title, { color: randColor }]}>
+             {title }
+           </Text>
+           <Text style={[styles.subTitle, { color: randColor }]}>
+             {numberCard }
+           </Text>
+
+         </View>
+         <View style={{
+           alignItems: 'flex-start',
+           justifyContent: 'flex-start',
+           flex: 1,
+           }}
+         >
            <Button
              containerStyle={{
-              padding: 12,
-              height: 55,
-              overflow: 'hidden',
-              borderRadius: 5,
-              backgroundColor: purple,
-              marginBottom: 10,
-              borderRadius: 4,
-              borderWidth: 0.5,
-              borderColor: randColor,
+             padding: 12,
+             height: 55,
+             overflow: 'hidden',
+             borderRadius: 5,
+             backgroundColor: white,
+             marginBottom: 10,
+             borderWidth: 1,
+             borderColor: purple,
              }}
              onPress={() => this.handleAddCard()}
-             style={{ fontSize: 25, color: randColor }}
+             style={{ fontSize: 25, color: purple }}
            >
             Add Card
            </Button>
            <Button
              containerStyle={{
-               padding: 12, height: 55, overflow: 'hidden', borderRadius: 5, backgroundColor: randColor, marginBottom: 10,
+             padding: 12,
+             height: 55,
+             overflow: 'hidden',
+             borderRadius: 5,
+             backgroundColor: purple,
+             borderWidth: 1,
+             borderColor: purple,
              }}
-             disabledContainerStyle={{ backgroundColor: randColor }}
              onPress={() => navigation.navigate(
             'Quiz',
             {
               questions, title, numberCard, randColor,
             },
 )}
-             style={{ fontSize: 25, color: 'white' }}
-             styleDisabled={{ color: 'white' }}
+             style={{ fontSize: 25, color: 'white', backgroundColor: purple }}
            >
             Start Quiz
            </Button>
@@ -82,15 +96,22 @@ const styles = StyleSheet.create({
     fontSize: 20,
     marginBottom: 20,
   },
-  btn: {
-    fontSize: 30,
-    borderColor: purple,
-    color: purple,
-  },
-  btnActive: {
-    borderColor: white,
-    backgroundColor: purple,
-    color: white,
+  // btn: {
+  // fontSize: 30,
+  // borderColor: purple,
+  // color: purple,
+  // },
+  // btnActive: {
+  // borderColor: white,
+  // backgroundColor: purple,
+  // color: white,
+  // },
+  borderBox: {
+    flex: 1,
+    justifyContent: 'flex-end',
+    alignItems: 'center',
+    padding: 12,
+    marginTop: 0,
   },
 
 })

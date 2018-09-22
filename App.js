@@ -24,6 +24,9 @@ export default class App extends React.Component {
   state = {
     isLoadingComplete: false,
   };
+  // componentDidMount() {
+  // set local notification function
+  // }
 
   render() {
     if (!this.state.isLoadingComplete && !this.props.skipLoadingScreen) {
