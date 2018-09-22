@@ -10,7 +10,6 @@ import {
   View,
   FlatList,
 } from 'react-native'
-import { WebBrowser } from 'expo'
 import { StyledOpenSansText } from '../components/StyledText'
 import { tintColor, lightPurp, purple, white } from '../constants/Colors'
 
@@ -30,7 +29,6 @@ class HomeScreen extends React.Component {
     // dispatch(handleInitDecks()) // fetch datas
 	  fetchDecks()
 	    .then(decks => dispatch(receiveDecks(decks)))
-    console.log('dddddddddddddd')
   }
   render() {
     const { decks } = this.props

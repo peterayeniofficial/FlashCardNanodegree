@@ -1,5 +1,6 @@
 export const RECEIVE_DECKS = 'RECEIVE_DECKS'
 export const ADD_DECK = 'ADD_DECK'
+export const ADD_CARD = 'GET_DECKS'
 
 export function receiveDecks(decks) {
   return {
@@ -7,6 +8,10 @@ export function receiveDecks(decks) {
     decks,
   }
 }
+// export const receiveDecks = decks => ({
+// type: RECEIVE_DECKS,
+// decks,
+// });
 
 export function addDeck({ name }) {
   return {
@@ -15,7 +20,9 @@ export function addDeck({ name }) {
   }
 }
 
-export const addCard = parameters => ({
-  type: ADD_CARD,
-  parameters,
-})
+export function addCard(parameters) {
+  return {
+    type: ADD_CARD,
+    parameters,
+  }
+}

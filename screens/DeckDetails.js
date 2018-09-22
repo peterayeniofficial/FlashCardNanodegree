@@ -18,8 +18,6 @@ class DeckDetails extends Component {
      const {
        questions, title, numberCard, randColor,
      } = navigation.state.params
-
-     console.log(questions, title, numberCard, randColor)
      return (
        <View style={styles.container}>
          <View style={[styles.borderBox, {
@@ -69,7 +67,7 @@ class DeckDetails extends Component {
              onPress={() => navigation.navigate(
             'Quiz',
             {
-              questions, title, numberCard, randColor,
+              questions, title, numberCard: questions.length, randColor,
             },
 )}
              style={{ fontSize: 25, color: 'white', backgroundColor: purple }}
