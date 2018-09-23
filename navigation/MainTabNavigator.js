@@ -29,20 +29,6 @@ HomeStack.navigationOptions = {
   ),
 }
 
-const LinksStack = createStackNavigator({
-  Links: LinksScreen,
-})
-
-LinksStack.navigationOptions = {
-  tabBarLabel: 'Links',
-  tabBarIcon: ({ focused }) => (
-    <TabBarIcon
-      focused={focused}
-      name={Platform.OS === 'ios' ? `ios-link${focused ? '' : '-outline'}` : 'md-link'}
-    />
-  ),
-}
-
 const SettingsStack = createStackNavigator({
   Settings: SettingsScreen,
 })
@@ -59,7 +45,6 @@ SettingsStack.navigationOptions = {
 
 const Tabs = createBottomTabNavigator({
   HomeStack,
-  LinksStack,
   SettingsStack,
 })
 
@@ -73,23 +58,23 @@ export default createStackNavigator({
   },
   DeckDetails: {
     screen: DeckDetails,
+    headerMode: 'none',
+    mode: 'modal',
     navigationOptions: {
       headerTintColor: white,
       headerStyle: {
         backgroundColor: purple,
-      },
-      headerTitleStyle: {
       },
     },
   },
   Quiz: {
     screen: Quiz,
+    headerMode: 'none',
+    mode: 'modal',
     navigationOptions: {
       headerTintColor: white,
       headerStyle: {
         backgroundColor: purple,
-      },
-      headerTitleStyle: {
       },
     },
   },

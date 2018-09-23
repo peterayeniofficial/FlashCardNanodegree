@@ -24,7 +24,6 @@ class Quiz extends Component {
     view: QUESTION_VIEW,
   }
 
-
   switchView = view => this.setState({
 	  view,
   })
@@ -62,7 +61,7 @@ class Quiz extends Component {
              backgroundColor: red,
              borderColor: red,
            }]}
-          onPress={() => this.answerQuestion(true)}
+          onPress={() => this.answerQuestion(false)}
           style={{ fontSize: 25, color: white }}
         >
             Incorrect
@@ -79,6 +78,7 @@ class Quiz extends Component {
     </View>
   )
 
+
 	restartQuiz = () => this.setState({
 	  currentQuestion: 0,
 	  correctAnswers: 0,
@@ -91,13 +91,14 @@ class Quiz extends Component {
 	  const {
 	    questions, title, numberCard, randColor,
 	  } = navigation.state.params
-	  console.log(questions, title, numberCard, randColor)
+	  console.log(correctAnswers, numberCard, (correctAnswers * 100 / numberCard))
+
 
 	  if (currentQuestion === questions.length) {
 	    return 	(
   <View style={styles.container}>
     <Text style={[styles.percentageCard, { color: red, paddingTop: 20, paddingBottom: 20 }]}>
-Your score: {correctAnswers * 100 / questions.length}%
+      Your score: {correctAnswers * 100 / numberCard}%
     </Text>
     <View style={styles.btnContainer}>
       <View style={styles.btnView}>
@@ -128,12 +129,13 @@ Your score: {correctAnswers * 100 / questions.length}%
   </View>)
 	  } // end if
 
+	  const counterCounterView = this.questionCounter(currentQuestion, questions.length)
 	  switch (view) {
 	    case ANSWER_VIEW:
 	      return (
   <View style={styles.container}>
     <View style={[styles.cardView, { backgroundColor: randColor }]}>
-      {this.questionCounter(currentQuestion, questions.length)}
+      {counterCounterView }
       <Text style={[styles.cardText, { color: white }]}>
         {questions[currentQuestion].answer}
       </Text>
@@ -157,7 +159,7 @@ Your score: {correctAnswers * 100 / questions.length}%
 	      return (
   <View style={styles.container}>
     <View style={[styles.cardView, { backgroundColor: randColor }]}>
-      {this.questionCounter(currentQuestion, questions.length)}
+      {counterCounterView }
       <Text style={[styles.cardText, { color: white }]}>
         {questions[currentQuestion].question}
       </Text>
@@ -249,9 +251,6 @@ const styles = StyleSheet.create({
   cardText: {
     fontSize: 25,
     padding: 10,
-  },
-  btnTouch: {
-    fontSize: 15,
   },
 })
 export default Quiz

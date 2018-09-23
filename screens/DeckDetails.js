@@ -21,7 +21,7 @@ class DeckDetails extends Component {
      return (
        <View style={styles.container}>
          <View style={[styles.borderBox, {
-           // borderColor: randColor, borderWidth: 1
+            borderColor: randColor,
            }]}
          >
            <Text style={[styles.title, { color: randColor }]}>
@@ -70,7 +70,7 @@ class DeckDetails extends Component {
               questions, title, numberCard: questions.length, randColor,
             },
 )}
-             style={{ fontSize: 25, color: 'white', backgroundColor: purple }}
+             style={{ fontSize: 25, color: purple, backgroundColor: purple }}
            >
             Start Quiz
            </Button>
@@ -105,7 +105,7 @@ const styles = StyleSheet.create({
   // color: white,
   // },
   borderBox: {
-    flex: 1,
+    flex: 0,
     justifyContent: 'flex-end',
     alignItems: 'center',
     padding: 12,
