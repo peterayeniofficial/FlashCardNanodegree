@@ -49,7 +49,8 @@ class DeckDetails extends Component {
              borderWidth: 1,
              borderColor: purple,
              }}
-             onPress={() => this.handleAddCard()}
+             navigateAction
+             onPress={() => this.props.navigation.navigate('AddCard', { title })}
              style={{ fontSize: 25, color: purple }}
            >
             Add Card
@@ -113,4 +114,4 @@ const styles = StyleSheet.create({
   },
 
 })
-export default DeckDetails
+export default withNavigation(DeckDetails)

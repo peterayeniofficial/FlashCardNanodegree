@@ -23,7 +23,7 @@ class Deck extends Component {
         questions, title, numberCard, randColor,
       },
     })
-    // console.log(questions, title, numberCard, randColor)
+    console.log(questions, title, numberCard, randColor)
     return (
       <View style={[styles.card, { backgroundColor: randColor }]}>
         <TouchableOpacity

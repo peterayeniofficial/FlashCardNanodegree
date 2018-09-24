@@ -8,15 +8,11 @@ export function receiveDecks(decks) {
     decks,
   }
 }
-// export const receiveDecks = decks => ({
-// type: RECEIVE_DECKS,
-// decks,
-// });
 
-export function addDeck({ name }) {
+export function addDeck({ title }) {
   return {
     type: ADD_DECK,
-    name,
+    title,
   }
 }
 

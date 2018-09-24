@@ -56,12 +56,6 @@ class HomeScreen extends React.Component {
   }
 }
 
-function mapStateToProps(decks, props) {
-  console.log(Object.values(decks))
-  return {
-    decks: Object.values(decks),
-  }
-}
 
 const styles = StyleSheet.create({
   container: {
@@ -100,4 +94,9 @@ const styles = StyleSheet.create({
     borderBottomRightRadius: 10,
   },
 })
+function mapStateToProps(decks, props) {
+  return {
+    decks: Object.values(decks),
+  }
+}
 export default connect(mapStateToProps)(HomeScreen)

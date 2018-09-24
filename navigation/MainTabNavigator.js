@@ -6,7 +6,8 @@ import { tintColor, lightPurp, purple, white } from '../constants/Colors'
 
 import TabBarIcon from '../components/TabBarIcon'
 import HomeScreen from '../screens/HomeScreen'
-import LinksScreen from '../screens/LinksScreen'
+import AddDeck from '../screens/AddDeck'
+import AddCard from '../screens/AddCard'
 import SettingsScreen from '../screens/SettingsScreen'
 import DeckDetails from '../screens/DeckDetails'
 import Quiz from '../screens/Quiz'
@@ -69,7 +70,26 @@ export default createStackNavigator({
   },
   Quiz: {
     screen: Quiz,
-    headerMode: 'none',
+    mode: 'modal',
+    navigationOptions: {
+      headerTintColor: white,
+      headerStyle: {
+        backgroundColor: purple,
+      },
+    },
+  },
+  AddCard: {
+    screen: AddCard,
+    mode: 'modal',
+    navigationOptions: {
+      headerTintColor: white,
+      headerStyle: {
+        backgroundColor: purple,
+      },
+    },
+  },
+  AddDeck: {
+    screen: AddDeck,
     mode: 'modal',
     navigationOptions: {
       headerTintColor: white,
