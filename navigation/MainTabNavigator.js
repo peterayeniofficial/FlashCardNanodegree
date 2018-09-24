@@ -8,7 +8,6 @@ import TabBarIcon from '../components/TabBarIcon'
 import HomeScreen from '../screens/HomeScreen'
 import AddDeck from '../screens/AddDeck'
 import AddCard from '../screens/AddCard'
-import SettingsScreen from '../screens/SettingsScreen'
 import DeckDetails from '../screens/DeckDetails'
 import Quiz from '../screens/Quiz'
 
@@ -30,11 +29,11 @@ HomeStack.navigationOptions = {
   ),
 }
 
-const SettingsStack = createStackNavigator({
-  Settings: SettingsScreen,
+const SettingAddDeck = createStackNavigator({
+  Settings: AddDeck,
 })
 
-SettingsStack.navigationOptions = {
+SettingAddDeck.navigationOptions = {
   tabBarLabel: 'New Deck',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
@@ -46,7 +45,7 @@ SettingsStack.navigationOptions = {
 
 const Tabs = createBottomTabNavigator({
   HomeStack,
-  SettingsStack,
+  SettingAddDeck,
 })
 
 export default createStackNavigator({

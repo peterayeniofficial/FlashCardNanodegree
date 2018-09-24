@@ -6,6 +6,7 @@ import {
   View,
   TextInput,
   Button,
+  KeyboardAvoidingView,
 } from 'react-native'
 import { tintColor, lightPurp, purple, white } from '../constants/Colors'
 import { addCard } from '../actions'
@@ -33,25 +34,29 @@ class AddCard extends Component {
 	  const { question, answer } = this.state
 	  // console.log(question, answer, this.props)
 	  return (
-  <View style={styles.containerForm}>
-    <TextInput
-      onChangeText={question => this.setState({ question })}
-      placeholder="Question..."
-      style={styles.inputCard}
-      value={question}
-    />
-    <TextInput
-      onChangeText={answer => this.setState({ answer })}
-      placeholder="Answer..."
-      style={styles.inputCard}
-      value={answer}
-    />
-    <Button
-      color={lightPurp}
-      onPress={this.submit}
-      title="Add card"
-    />
-  </View>
+      <KeyboardAvoidingView
+        behavior="padding"
+        enabled
+        style={styles.containerForm}
+      >
+        <TextInput
+          onChangeText={question => this.setState({ question })}
+          placeholder="Question..."
+          style={styles.inputCard}
+          value={question}
+        />
+        <TextInput
+          onChangeText={answer => this.setState({ answer })}
+          placeholder="Answer..."
+          style={styles.inputCard}
+          value={answer}
+        />
+        <Button
+          color={lightPurp}
+          onPress={this.submit}
+          title="Add card"
+        />
+      </KeyboardAvoidingView>
 	  )
 	}
 }
