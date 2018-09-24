@@ -32,7 +32,7 @@ class HomeScreen extends React.Component {
   }
   render() {
     const { decks } = this.props
-    console.log(decks)
+    // console.log(decks)
     return (
       <View style={styles.container}>
         <View style={styles.getStartedContainer}>

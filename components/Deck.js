@@ -20,10 +20,10 @@ class Deck extends Component {
     const navigateAction = NavigationActions.navigate({
       routeName: 'DeckDetails',
       params: {
-        questions, title, numberCard, randColor,
+        questions, title, randColor,
       },
     })
-    console.log(questions, title, numberCard, randColor)
+    // console.log(questions, title, randColor)
     return (
       <View style={[styles.card, { backgroundColor: randColor }]}>
         <TouchableOpacity

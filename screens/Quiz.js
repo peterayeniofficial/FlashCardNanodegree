@@ -7,6 +7,7 @@ import {
 } from 'react-native'
 import { red, warning, tintColor, lightPurp, purple, white } from '../constants/Colors'
 import Button from 'react-native-button'
+import { connect } from 'react-redux'
 
 // constance to use with switch() view
 const QUESTION_VIEW = 'QUESTION_VIEW'
@@ -87,10 +88,13 @@ class Quiz extends Component {
 	render() {
 	  // console.log(this.props)
 	  const { currentQuestion, correctAnswers, view } = this.state
-	  const { navigation } = this.props
+	  const { navigation, decks } = this.props
 	  const {
-	    questions, title, numberCard, randColor,
+	    title, randColor,
 	  } = navigation.state.params
+	  const questions = decks[title].questions
+	  const numberCard = questions.length
+	  console.log(questions, title, numberCard, randColor, decks)
 	  console.log(correctAnswers, numberCard, (correctAnswers * 100 / numberCard))
 
 
@@ -253,4 +257,9 @@ const styles = StyleSheet.create({
     padding: 10,
   },
 })
-export default Quiz
+function mapStateToProps(decks, props) {
+  return {
+    decks,
+  }
+}
+export default connect(mapStateToProps)(Quiz)

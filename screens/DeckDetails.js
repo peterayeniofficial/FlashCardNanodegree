@@ -13,11 +13,16 @@ class DeckDetails extends Component {
      title: `Deck: ${navigation.state.params.title}`,
    });
    render() {
-     console.log(this.props)
-     const { navigation } = this.props
+     // console.log(this.props)
+     const { navigation, decks } = this.props
      const {
-       questions, title, numberCard, randColor,
+       questions, title, randColor,
      } = navigation.state.params
+     // console.log(decks[title].questions.length)
+     const numberQuestions = decks[title].questions.length
+     const numberCard = numberQuestions && numberQuestions > 1
+       ? `${numberQuestions} cards`
+       : `${numberQuestions} card`
      return (
        <View style={styles.container}>
          <View style={[styles.borderBox, {
@@ -68,7 +73,7 @@ class DeckDetails extends Component {
              onPress={() => navigation.navigate(
             'Quiz',
             {
-              questions, title, numberCard: questions.length, randColor,
+              title, randColor,
             },
 )}
              style={{ fontSize: 25, color: purple, backgroundColor: purple }}
@@ -114,4 +119,10 @@ const styles = StyleSheet.create({
   },
 
 })
-export default withNavigation(DeckDetails)
+function mapStateToProps(decks, props) {
+  // console.log(decks)
+  return {
+    decks,
+  }
+}
+export default withNavigation(connect(mapStateToProps)(DeckDetails))

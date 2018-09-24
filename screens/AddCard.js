@@ -20,6 +20,7 @@ class AddCard extends Component {
 	submit = () => {
 	  const { dispatch, navigation } = this.props
 	  const { question, answer } = this.state
+	  // console.log(navigation.getParam('title'))
 	  dispatch(addCard({
 	    title: navigation.getParam('title'),
 	    question,
@@ -30,7 +31,7 @@ class AddCard extends Component {
 
 	render() {
 	  const { question, answer } = this.state
-	  console.log(question, answer, this.props)
+	  // console.log(question, answer, this.props)
 	  return (
   <View style={styles.containerForm}>
     <TextInput
