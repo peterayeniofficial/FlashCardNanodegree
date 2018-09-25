@@ -95,8 +95,9 @@ const styles = StyleSheet.create({
   },
 })
 function mapStateToProps(decks, props) {
+  console.log(Object.values(decks).reverse())
   return {
-    decks: Object.values(decks),
+    decks: Object.values(decks).reverse(),
   }
 }
 export default connect(mapStateToProps)(HomeScreen)

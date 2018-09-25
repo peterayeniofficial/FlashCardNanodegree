@@ -19,44 +19,48 @@ class AddCard extends Component {
 	}
 
 	submit = () => {
-	  const { dispatch, navigation } = this.props
 	  const { question, answer } = this.state
-	  // console.log(navigation.getParam('title'))
-	  dispatch(addCard({
-	    title: navigation.getParam('title'),
-	    question,
-	    answer,
-	  }))
-	  navigation.goBack()
+	  if (question === '' || answer === '') {
+	    alert('You need to have a question and answer')
+	  } else {
+	    const { dispatch, navigation } = this.props
+	    // console.log(navigation.getParam('title'))
+	    dispatch(addCard({
+	      title: navigation.getParam('title'),
+	      question,
+	      answer,
+	    }))
+	    navigation.navigate('HomeStack')
+	  }
 	}
 
 	render() {
 	  const { question, answer } = this.state
 	  // console.log(question, answer, this.props)
 	  return (
-      <KeyboardAvoidingView
-        behavior="padding"
-        enabled
-        style={styles.containerForm}
-      >
-        <TextInput
-          onChangeText={question => this.setState({ question })}
-          placeholder="Question..."
-          style={styles.inputCard}
-          value={question}
-        />
-        <TextInput
-          onChangeText={answer => this.setState({ answer })}
-          placeholder="Answer..."
-          style={styles.inputCard}
-          value={answer}
-        />
-        <Button
-          color={lightPurp}
-          onPress={this.submit}
-          title="Add card"
-        />
-      </KeyboardAvoidingView>
+  <KeyboardAvoidingView
+    behavior="padding"
+    enabled
+    style={styles.containerForm}
+  >
+    <TextInput
+      onChangeText={question => this.setState({ question })}
+      placeholder="Question..."
+      style={styles.inputCard}
+      value={question}
+    />
+    <TextInput
+      onChangeText={answer => this.setState({ answer })}
+      placeholder="Answer..."
+      style={styles.inputCard}
+      value={answer}
+    />
+    <Button
+      color={lightPurp}
+      onPress={this.submit}
+      title="Add card"
+    />
+  </KeyboardAvoidingView>
 	  )
 	}
 }

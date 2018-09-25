@@ -21,11 +21,15 @@ class AddDeck extends Component {
 	}
 
 	submit = () => {
-	  const { dispatch, navigation } = this.props
 	  const { title } = this.state
-	  console.log(title, { title }) // need to return in the reducer: {title:'dddd'}
-	  dispatch(addDeck({ title }))
-	  navigation.navigate('Deck', { title })
+	  if (title === '') {
+	    alert('the field can\'t be empty')
+	  } else {
+	  const { dispatch, navigation } = this.props
+	    console.log(title, { title }) // need to return in the reducer: {title:'dddd'}
+	    dispatch(addDeck({ title }))
+	    navigation.navigate('Home')
+	  }
 	}
 
 	render() {

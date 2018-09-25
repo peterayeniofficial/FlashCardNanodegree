@@ -4,7 +4,7 @@ import { createStackNavigator, createBottomTabNavigator } from 'react-navigation
 
 import { tintColor, lightPurp, purple, white } from '../constants/Colors'
 
-import TabBarIcon from '../components/TabBarIcon'
+import { TabBarIcon } from '../components/TabBarIcon'
 import HomeScreen from '../screens/HomeScreen'
 import AddDeck from '../screens/AddDeck'
 import AddCard from '../screens/AddCard'
@@ -23,7 +23,7 @@ HomeStack.navigationOptions = {
       name={
         Platform.OS === 'ios'
           ? `ios-cube${focused ? '' : '-outline'}`
-          : 'md-information-circle'
+          : 'md-filing'
       }
     />
   ),
@@ -38,7 +38,10 @@ SettingAddDeck.navigationOptions = {
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
-      name={Platform.OS === 'ios' ? `ios-play${focused ? '' : '-outline'}` : 'play-arrow'}
+      name={
+      Platform.OS === 'ios'
+      ? `ios-play${focused ? '' : '-outline'}`
+      : 'md-add'}
     />
   ),
 }
@@ -85,6 +88,7 @@ export default createStackNavigator({
       headerStyle: {
         backgroundColor: purple,
       },
+      headerTintColor: { tintColor },
     },
   },
   AddDeck: {

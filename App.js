@@ -1,4 +1,5 @@
 import React from 'react'
+import './ReactotronConfig'
 import { Platform, StatusBar, StyleSheet, View } from 'react-native'
 import { applyMiddleware, createStore } from 'redux'
 import { createLogger } from 'redux-logger'
@@ -8,6 +9,7 @@ import middlewares from './middleware'
 import { Constants, AppLoading, Asset, Font, Icon } from 'expo'
 import AppNavigator from './navigation/AppNavigator'
 import { purple, white } from './constants/Colors'
+import { setLocalNotification } from './utils/notifications'
 
 
 function FlashCardStatusBar({ backgroundColor, ...props }) {
@@ -24,9 +26,10 @@ export default class App extends React.Component {
   state = {
     isLoadingComplete: false,
   };
-  // componentDidMount() {
-  // set local notification function
-  // }
+  componentDidMount() {
+    // set local notification function
+    setLocalNotification()
+  }
 
   render() {
     if (!this.state.isLoadingComplete && !this.props.skipLoadingScreen) {
